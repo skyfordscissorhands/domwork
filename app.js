@@ -41,3 +41,5 @@ document.getElementsByClassName('selected').onclick;
 
 
 // When the gray div is moused over, it's removed from the DOM.
+document.querySelector('.listItem')addEventListener('mouseout',);
+document.querySelector('ghosting')addEventListener();
