@@ -35,8 +35,25 @@ for (var i = 0; i< array.length; i++) {
 };
 // Add the class of selected to an <li> when it is clicked.
 //  Remove it from any other lis as well.
-document.getElementsByClassName('selected').onclick;
 
+let essentialsLi =document.querySelectorAll('#essentials li');
+for(var i = 0; i<essentialsLi.length; i++) {
+    essentialsLi[i].addEventListener("click", handleEssentials)
+      
+}
+function handleEssentials (event) {
+    // clicked is the list itme just clicked by the user
+let clicked = event.target;
+// first job remove selected class
+let oldLi = document.querySelector("#essentials li.selected");
+oldLi.className= "";
+// second  job make clicled li have selected class
+clicked.className="selected";
+// 3rd job change image 
+let img = document.querySelector('img[alt='+ oldLi.textContent+ "]");
+img.src= "images/" + clicked.textContent + ".jpeg";
+img.setAttribute('alt',clicked.textContent);
+}
 // Change the image to be the most recently clicked food item.
 
 
